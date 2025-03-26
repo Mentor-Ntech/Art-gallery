@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.24;
+pragma solidity ^0.8.27;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "./ArtworkToken.sol";
@@ -12,9 +12,9 @@ contract FractionalArtGallery is Ownable {
     Marketplace public marketplace;
     RoyaltyManager public royaltyManager;
 
-    constructor(address initialOwner) Ownable(initialOwner) {  
+    constructor() Ownable(msg.sender) {  
         artworkToken = new ArtworkToken();
-        royaltyManager = new RoyaltyManager(initialOwner);  // ✅ Pass initialOwner here
+        royaltyManager = new RoyaltyManager(msg.sender);  // ✅ Pass initialOwner here
         marketplace = new Marketplace(address(artworkToken), address(royaltyManager));
     }
 

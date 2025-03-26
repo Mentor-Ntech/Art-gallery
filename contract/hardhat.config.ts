@@ -1,19 +1,20 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
-import * as dotenv from "dotenv";
+import dotenv from "dotenv";
 
 dotenv.config();
+console.log({privateKey: process.env.API_KEY})
 
-if (!process.env.PRIVATE_KEY) {
+if (!process.env.API_KEY) {
   throw new Error("No private key");
 }
 
-if (!process.env.CELOSCAN_API_KEY) {
+if (!process.env.Ether_API_KEY) {
   throw new Error("No celoscan key");
 }
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.24",
+  solidity: "0.8.27",
 
   networks: {
     alfajores: {

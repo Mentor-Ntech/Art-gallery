@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.27;
 
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
@@ -34,7 +34,7 @@ contract Marketplace is  Ownable {
         emit ArtworkListed(tokenId, fractionToken, totalFractions, pricePerFraction, msg.sender);
     }
 
-    function purchaseFractions(uint256 tokenId, uint256 amount) external payable nonReentrant {
+    function purchaseFractions(uint256 tokenId, uint256 amount) external payable  {
         Listing storage listing = listings[tokenId];
         require(listing.availableFractions >= amount, "Not enough fractions available");
         require(msg.value >= listing.pricePerFraction * amount, "Insufficient payment");
