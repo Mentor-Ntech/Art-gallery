@@ -21,7 +21,6 @@ const ArtworkDetails = () => {
   const { id } = useParams()
   const [fractionsToBuy, setFractionsToBuy] = useState(1)
 
-  // In a real application, you would fetch the artwork data based on the ID
   const artwork = mockArtwork
 
   const handleBuy = () => {
