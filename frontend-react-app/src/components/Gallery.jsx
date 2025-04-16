@@ -33,7 +33,6 @@ const mockArtworks = [
     fractionsAvailable: 90,
     totalFractions: 100,
   },
-  // Add more mock artworks here
 ]
 
 const Gallery = () => {
