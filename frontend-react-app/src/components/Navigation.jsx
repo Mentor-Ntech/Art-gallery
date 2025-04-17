@@ -44,7 +44,6 @@ import { Link } from "react-router-dom";
 import { Home, Image, User } from "lucide-react";
 
 const Navigation = () => {
-  // State for wallet address
   const [walletAddress, setWalletAddress] = useState("");
 
   // Function to handle wallet connection
