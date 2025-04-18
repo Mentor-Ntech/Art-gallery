@@ -1,6 +1,5 @@
 import { Palette, DollarSign, TrendingUp } from "lucide-react"
 
-// Mock data for user's owned fractions
 const mockOwnedFractions = [
   { id: "1", title: "Digital Dreamscape", fractions: 10, value: 500 },
   { id: "2", title: "Neon Nights", fractions: 5, value: 175 },
