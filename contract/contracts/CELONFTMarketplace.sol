@@ -51,7 +51,7 @@ contract CELONFTMarketplace is ERC721URIStorage, Ownable, ReentrancyGuard {
     // Array to store all collection names
     string[] private _collectionNames;
     
-    // Mapping from listing ID to Listing
+    
     mapping(uint256 => Listing) private _listings;
     
     // Array to keep track of all active listing IDs
