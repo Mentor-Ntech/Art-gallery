@@ -242,7 +242,6 @@ contract CELONFTMarketplace is ERC721URIStorage, Ownable, ReentrancyGuard {
         // Transfer the NFT to the buyer
         _transfer(seller, msg.sender, tokenId);
         
-        // Add seller earnings to their balance
         _userBalances[seller] += sellerAmount;
         
         // Add royalty to creator's balance
